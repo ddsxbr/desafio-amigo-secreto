@@ -1,4 +1,4 @@
-let amigos = []
+let amigos = [];
 
 function adicionar() {
     let nome = document.getElementById('nome-amigo');
@@ -16,3 +16,24 @@ function adicionar() {
     atualizarSorteio()
     atualizarLista();
 } 
+
+function sortear() {
+    embaralhar(listaAmigos); 
+    let sorteio = document.getElementById('lista-sorteio'); 
+
+    for (let index = 0; index < listaAmigos.length; index++) {
+        if (index == listaAmigos.length -1) {
+            sorteio.innerHTML = sorteio.innerHTML + listaAmigos[index] + ' --> ' + listaAmigos[0] + '<br/>';
+        } else {
+            sorteio.innerHTML = sorteio.innerHTML + listaAmigos[index] + ' --> ' + listaAmigos[index+1] + '<br/>';
+        }
+        
+    }
+}
+
+function embaralhar(lista) {
+    for (let indice = lista.length; indice; indice--) {
+    const indiceAleatorio = Math.floor(Math.random() * indice);
+    [lista[indice - 1], lista[indiceAleatorio]] = [lista[indiceAleatorio], lista[indice -1]];
+    }
+}
