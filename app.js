@@ -33,3 +33,22 @@ function sortearAmigo(){
     let resultadoDoAmigoSecreto = document.getElementById("resultado");
     resultadoDoAmigoSecreto.innerHTML = "Seu amigo secreto é " + nomePessoaSorteada;
 }
+
+function limparMenu(){
+
+    let listaTotalAmigos = document.getElementById("listaAmigos");
+    
+    
+    listaTotalAmigos.innerHTML = '';
+
+    
+    let totalAmigos = 0;
+
+        while (totalAmigos < amigosSecretos.length) {
+            let lista = document.createElement("li");
+            lista.textContent = amigosSecretos[totalAmigos];
+            listaTotalAmigos.appendChild(lista);     
+            
+            totalAmigos++;
+        }
+}
