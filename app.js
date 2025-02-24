@@ -60,6 +60,16 @@ function reiniciar() {
     function atualizarLista() {
         let listaNomes = document.getElementById('lista-amigos');
         listaNomes.innerHTML;
-    
-    
+
+        for (let i = 0; i < amigos.length; i++) {      
+            let paragrafo = document.createElement('p');
+            paragrafo.textContent = amigos[i];
+
+            paragrafo.addEventListener('click', function() {
+                excluirAmigo(i);
+           
+        });
+
+        lista.appendChild(paragrafo);
     }
+}
