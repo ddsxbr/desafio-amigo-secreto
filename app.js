@@ -38,4 +38,13 @@ function embaralhar(lista) {
     }
 }
 
-function reiniciar() 
+function reiniciar() {
+    let botaoreiniciar = document.querySelector('a');
+    botaoreiniciar.innerHTML
+    listaAmigos = [];
+    document.getElementById('lista-amigos').innerHTML = '';
+    document.getElementById('lista-sorteio').innerHTML = '';
+
+    }
+
+    
