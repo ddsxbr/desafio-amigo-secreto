@@ -52,3 +52,8 @@ function reiniciar() {
         atualizarSorteio();
         atualizarLista();
     }
+
+    function atualizarSorteio() {
+        let sorteio = document.getElementById('lista-sorteio');
+        sorteio.innerHTML;
+    }
