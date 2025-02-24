@@ -22,5 +22,14 @@ function adicionarAmigo(){
     limparMenu();
 }
 
+function sortearAmigo(){
+    if (amigosSecretos.length == 0) {
+        alert("Por favor, inserir nomes para iniciar o sorteio.");
+        return;
+    }
 
-
+    let sorteador = Math.floor(Math.random() * amigosSecretos.length);
+    let nomePessoaSorteada = amigosSecretos[sorteador];
+    let resultadoDoAmigoSecreto = document.getElementById("resultado");
+    resultadoDoAmigoSecreto.innerHTML = "Seu amigo secreto é " + nomePessoaSorteada;
+}
