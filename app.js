@@ -10,7 +10,6 @@ function adicionar() {
     } else {
         listaNomes.textContent = listaNomes.textContent + ', ' + nome.value;
     }
-
     
     nome.value = '';
     atualizarSorteio()
@@ -56,4 +55,11 @@ function reiniciar() {
     function atualizarSorteio() {
         let sorteio = document.getElementById('lista-sorteio');
         sorteio.innerHTML;
+    }
+
+    function atualizarLista() {
+        let listaNomes = document.getElementById('lista-amigos');
+        listaNomes.innerHTML;
+    
+    
     }
