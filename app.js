@@ -47,4 +47,8 @@ function reiniciar() {
 
     }
 
-    
+    function excluirAmigo(lista, index) {
+        lista.splice(index, 1);
+        atualizarSorteio();
+        atualizarLista();
+    }
