@@ -1,23 +1,19 @@
 let amigosSecretos = [];
 
-
-
 function adicionarAmigo(){
 
     
     let digito = document.getElementById("amigo");
     let nomeDoAmigoSecreto = digito.value.trim();
     
-    
     if (nomeDoAmigoSecreto == '') {
         alert("Por favor, digite um nome válido!");
         return;
     }
 
-    
-    amigosSecretos.push(nomeDoAmigoSecreto);
+     amigosSecretos.push(nomeDoAmigoSecreto);
 
-    digito.value = '';
+     digito.value = '';
 
     limparMenu();
 }
@@ -38,10 +34,8 @@ function limparMenu(){
 
     let listaTotalAmigos = document.getElementById("listaAmigos");
     
-    
     listaTotalAmigos.innerHTML = '';
 
-    
     let totalAmigos = 0;
 
         while (totalAmigos < amigosSecretos.length) {
